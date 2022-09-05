@@ -1,17 +1,19 @@
 <template>
   <v-app>
-    <et-header />
+    <et-header @nav-clicked="onNavClicked" />
+    <et-side-navigation :is-open="isOpen" />
   </v-app>
 </template>
 
-<script lang="ts">
-import EtHeader from '@/components/Header.vue'
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    EtHeader,
-  },
-})
+import EtHeader from '@/components/EtHeader.vue'
+import EtSideNavigation from '@/components/EtSideNavigation.vue'
+
+const isOpen = ref(true)
+
+const onNavClicked = () => {
+  isOpen.value = !isOpen.value
+}
 </script>
