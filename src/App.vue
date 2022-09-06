@@ -2,6 +2,7 @@
   <v-app>
     <et-header @nav-clicked="onNavClicked" />
     <et-side-navigation :is-open="isOpen" />
+    <router-view />
   </v-app>
 </template>
 

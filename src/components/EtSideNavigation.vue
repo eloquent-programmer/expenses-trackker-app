@@ -12,15 +12,19 @@
         prepend-icon="mdi-view-dashboard"
         title="Dashboard"
         value="dashboard"
+        to="/"
       ></v-list-item>
-      <v-list-item prepend-icon="mdi-cash" title="New Budget" value="newBudget"></v-list-item>
+      <v-list-item
+        prepend-icon="mdi-cash"
+        title="New Budget"
+        value="newBudget"
+        to="/budget"
+      ></v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 defineProps<{
   isOpen: boolean
 }>()
